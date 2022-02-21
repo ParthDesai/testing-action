@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Invocation of testnet review action
         id: review
-        uses: parthdesai/action-testnet-review-pr@5b14b726aaa0d23753102f82097182e0bfd83b82
+        uses: parthdesai/action-testnet-review-pr@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
