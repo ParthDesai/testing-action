@@ -21,7 +21,3 @@ jobs:
           requiredGenesisModification: true
           genTxDirectory: 1/2
           genesisFilePath: genesis.json
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The output was ${{ steps.review.outputs }}"
-
