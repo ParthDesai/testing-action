@@ -12,8 +12,9 @@ jobs:
       - name: Invocation of testnet review action
         id: review
         uses: parthdesai/action-testnet-review-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
           requiredGenesisModification: true
           genTxDirectory: 1/2
           genesisFilePath: genesis.json
