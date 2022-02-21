@@ -13,6 +13,7 @@ jobs:
         id: review
         uses: parthdesai/action-testnet-review-pr@master
         with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
           requiredGenesisModification: true
           genTxDirectory: 1/2
           genesisFilePath: genesis.json
