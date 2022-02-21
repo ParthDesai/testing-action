@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  review_job:
+    runs-on: ubuntu-latest
+    name: A job to validate the PR
+    steps:
+      - name: Invocation of testnet review action
+        id: review
+        uses: parthdesai/action-testnet-review-pr@master
+        with:
+          requiredGenesisModification: true
+          genTxDirectory: 1/2
+          genesisFilePath: genesis.json
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The output was ${{ steps.review.outputs }}"
